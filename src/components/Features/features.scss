@@ -1,0 +1,62 @@
+.features{
+    --color-border: #333333;
+    h2{
+        font-family: var(--ff-satoshi);
+        font-weight: 500;
+        font-size: 4.8rem;
+        line-height: 64.8px;
+        margin-bottom: 37px;
+    }
+
+    .feature{
+        padding-block: 60px;
+        display: flex;
+        gap: 3.7rem;
+        border-top: 1px solid var(--color-border);
+
+        img{
+
+        }
+
+        &__text{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+            h3{
+                font-size: 40px;
+                font-weight: 700;
+                line-height: 50px;
+                font-family: var(--ff-logo);
+            }
+            p{
+                font-family: var(--ff-satoshi);
+                font-weight: 400;
+                font-size: 24px;
+                line-height: 32.4px;
+
+            }
+            
+            .creators{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+               
+                   img:not(:nth-child(1)){
+                     margin-left:-10%;
+                    // transform: translateX(-50%);
+                     border-radius: 50%;
+                   
+
+                }
+                &__numbers{
+
+
+                }
+                .link{
+
+                }
+                }
+            }
+    }
+}

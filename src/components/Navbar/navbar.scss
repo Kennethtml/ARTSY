@@ -1,0 +1,53 @@
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // border: 1px solid #000;
+
+    
+    .logo{
+        font-family: var(--ff-logo);
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 90px;
+        // display: inline-block;
+    }
+    .hambugger{
+        display: none;
+
+        @media(max-width: 800px){
+            display: block;
+        }
+    }
+    &__links{
+        display: flex;
+        align-items: center;
+        gap: 4.7rem;
+
+          @media(max-width: 800px){
+            display:none;
+        }
+        &-links{
+            font-family: var(--ff-satoshi);
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 32.4px;
+        }
+    }
+    &__buttons{
+        display: flex;
+        align-items: center;
+        gap: 3.15rem;
+
+        button{
+            width: 28px;
+            height: 28px;
+        }
+    }
+}
+
+.btn-logo{
+    border: 0;
+    outline: 0;
+    background: transparent;
+}

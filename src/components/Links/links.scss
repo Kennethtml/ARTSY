@@ -1,0 +1,27 @@
+.links{
+    padding-block: 190px;
+
+    .link{
+        padding-block: 54px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        border-top: 0.5px solid #333333;
+        &:last-child{
+            border-bottom: 0.5px solid #333333;
+        }
+        
+        &__name{
+            margin-left: 78px;
+          font-family: var(--ff-satoshi); 
+          font-weight: 500;
+          font-size: 48px;
+          line-height: 64px;
+
+        }
+        &__url{
+        }
+
+    }
+}

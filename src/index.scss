@@ -1,0 +1,86 @@
+
+
+:root {
+--ff-satoshi:'Satoshi', sans-serif;
+--ff-logo: 'STIX Two Text', serif;
+--ff-clash: 'Clash Display', sans-serif;
+--ff-poppins: 'Poppins', sans-serif;
+--ff-bellefaire:'Bellefair', serif;
+}
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+
+
+button{
+  cursor: pointer;
+}
+html{
+  font-size: 10px;
+}
+
+.container{
+max-width: 144rem;
+margin-inline: auto;
+padding-top: 80px;
+ overflow: hidden;
+/* border: 1px solid #000; */
+}
+.wrapper{
+  width: 83.333%;
+  margin-inline: auto;
+}
+@keyframes slideleft{
+  0%{
+    transform: translateX(0%);
+  }
+   5%{
+    transform: translateX(-100%);
+  }
+  25%{
+    transform: translateX(-100%);
+  }
+   30%{
+    transform: translateX(-200%);
+  }
+  50%{
+    transform: translateX(-200%);
+
+  }
+  55%{
+     transform: translateX(-300%);
+
+  }
+  75%{
+     transform: translateX(-300%);
+
+  }
+  80%{
+     transform: translateX(-400%);
+  }
+
+  90%{
+      transform: translateX(-400%);
+  }
+   100%{
+      transform: translateX(0%);
+  }
+}
+@keyframes slideright{
+  0%{
+    transform: translateX(0%);
+  }
+  100%{
+    transform: translateX(100%);
+  }
+}
+
+
+
+
+
+

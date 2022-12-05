@@ -1,0 +1,43 @@
+
+@mixin fonts($fontfamily,$fontsize,$fontweight,$lineheight) {
+    font-family: $fontfamily;
+    font-size: $fontsize;
+    font-weight: $fontweight;
+    line-height: $lineheight;
+    
+}
+.form{
+
+    border: 1px solid #333333;
+    padding-block:62px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 27px;
+
+    &__header{
+        @include fonts(var(--ff-bellefaire),30px,400,39px);
+        text-transform:uppercase;
+
+    }
+    &__info{
+        @include fonts(var(--ff-satoshi),32px ,400 ,43px )
+    }
+    .input{
+        display: flex;
+        gap: 23px;
+        width: 50%;
+
+        input{
+            padding: 20px;
+            flex: 1;
+
+        }
+        button{
+            background: #272727;
+            padding: 23px 45px;
+            color: #fff;
+
+        }
+    }
+}
