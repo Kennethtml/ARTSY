@@ -33,16 +33,31 @@ html{
   }
 }
 
+ img{
+            display: block;
+            width: 100%;
+        }
+
 .container{
 max-width: 144rem;
 margin-inline: auto;
 padding-top: 80px;
  overflow: hidden;
+
+ @media(max-width:400px){
+  padding-top: 32px;
+
+ }
+
 /* border: 1px solid #000; */
 }
 .wrapper{
   width: 83.333%;
   margin-inline: auto;
+   @media(max-width:400px){
+   width: 92.3%;
+
+ }
 }
 @keyframes slideleft{
   0%{

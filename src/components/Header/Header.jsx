@@ -6,6 +6,8 @@ import carousel3 from "../../assets/carousel3.jpg";
 import carousel4 from "../../assets/carousel4.png";
 import carousel5 from "../../assets/carousel5.jpg";
 
+import heromobile from '../../assets/heroimages.jpg'
+
 function Header() {
   return (
     <header className="heading">
@@ -18,6 +20,9 @@ function Header() {
           images and captures seamlessly in one place. Register to get top
           access.
         </p>
+      </div>
+      <div className="heading__carousel-mobile">
+        <img src={heromobile} alt="" />
       </div>
       <div className="heading__carousel">
         <div className="carousel-1">

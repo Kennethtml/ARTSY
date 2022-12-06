@@ -10,6 +10,15 @@
             font-weight: 600;
             font-size:8rem;
             line-height: 13.4rem;
+            margin-bottom: 30px;
+
+            @media(max-width: 400px){
+                font-family: var(--ff-clash);
+            font-weight: 500;
+            font-size:32px;
+            line-height: 48px;
+
+            }
         }
         &-paragraph{
             font-weight: 500;
@@ -21,6 +30,24 @@
     }
 
     &__carousel{
+       
+        
+
+        &-mobile{
+             width: 100%;
+             margin-top: 8.2rem;
+        
+        img{
+            display: block;
+            width: 100%;
+            object-fit: contain;
+        }
+            display: none;
+             @media(max-width: 400px){
+              display: block;
+
+            }
+        }
         display: grid;
         grid-template-columns: repeat(5, 33.8rem);
         gap: 2rem;
@@ -28,17 +55,38 @@
         align-items: center;
         
          transform: translateX(-3rem);
+
+         @media(max-width:400px){
+          display: none;
+          position: relative;
+          height: 302px;
+          transform: translateX(0);
+
+
+         }
           
          
 
            [class^="carousel-"]{
              overflow: hidden;
             // border:4px solid #000;
+             @media(max-width:400px){
+            max-width: 375px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+
+         }
 
               .carousel__wrapper {
                 animation: slideleft 10s ease-in-out infinite !important;
-                // animation-delay: 2s;
-                //  border:4px solid red !important;
+ @media(max-width:400px){
+             animation: none 0 ease normal !important;
+
+         }
+
+                
             }
 
 
@@ -56,19 +104,19 @@
       .carousel__wrapper{
         display: grid;
         grid-template-columns: repeat(5, 33.8rem) ;
+        
+
+        
       
-    //    animation: slideleft 2s ease-in-out ;
-        // transition: transform 2s ease-in-out;
-        //     &:hover{
-        //         transform: translateX(-338px);
-        //     }
+  
     }
+
+
 
         .carousel-1{
             
-            height: 332px;
-            // margin-top: 62px;
-            // position: absolute;
+            height: 33.2rem;
+          
            
             img{
                 object-fit: cover;
