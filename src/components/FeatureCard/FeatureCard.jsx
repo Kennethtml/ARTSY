@@ -5,7 +5,7 @@ import creator3 from "../../assets/creator3.jpg";
 import creator4 from "../../assets/creator4.jpg";
 import creator5 from "../../assets/creator4.jpg";
 
-import circlearrow from "../../assets/circlearrow.svg"
+import circlearrow from "../../assets/circleArrow.svg"
 
 function FeatureCard({image,title,about,direction}) {
 const creators = [
