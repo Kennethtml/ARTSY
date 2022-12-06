@@ -1,0 +1,65 @@
+.footer {
+  padding-block: 60px;
+
+  .logo {
+    font-family: var(--ff-logo);
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 59px;
+  }
+
+  &__main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 33px;
+    }
+
+    ul li {
+      list-style: none;
+      font-family: var(--ff-satoshi);
+      font-weight: 400;
+      font-size: 26px;
+      line-height: 35px;
+    }
+    .contact {
+      display: flex;
+      flex-direction: column;
+      gap: 63px;
+      align-self: flex-start;
+      & > * {
+        display: flex;
+        gap: 20px;
+        p {
+          list-style: none;
+          font-family: var(--ff-satoshi);
+          font-weight: 400;
+          font-size: 26px;
+          line-height: 35px;
+        }
+      }
+    }
+
+    
+  }
+  .copyright {
+      font-family: var(--ff-poppins);
+      text-align: center;
+
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 21px;
+  
+
+      letter-spacing: -0.02em;
+
+      color: #333333;
+
+      opacity: 0.5;
+      margin-top: 91px;
+    }
+}

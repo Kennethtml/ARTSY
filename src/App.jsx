@@ -1,12 +1,9 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
+
 import './App.scss'
 import Navbar from './components/Navbar/Navbar'
-import Header from './components/Header/Header'
-import Features from './components/Features/Features'
-import Exhibition from './components/Exhibition/Exhibition'
-import Links from './components/Links/Links'
-import Form from './components/Form/Form'
+import {Route,Routes} from "react-router-dom"
+import Home from './Pages/Home'
+import Drop from './Pages/Drop'
 
 
 function App() {
@@ -15,11 +12,13 @@ function App() {
   return (
     <div className="container">
       <Navbar/>
-      <Header/>
-      <Features/>
-      <Exhibition/>
-      <Links/>
-      <Form/>
+      <Routes>
+        <Route index element={<Home/>}/>
+        <Route path='/drop' element={<Drop/>} />
+        
+
+     
+      </Routes>
     
     </div>
   )
