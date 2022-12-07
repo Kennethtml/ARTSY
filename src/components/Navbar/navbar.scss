@@ -11,13 +11,50 @@
         font-weight: 700;
         line-height: 9rem;
         // display: inline-block;
+        position: relative;
+       
     }
     .hambugger{
         display: none;
+         z-index: 100;
 
         @media(max-width: 800px){
             display: block;
         }
+    }
+
+     &__links.toggle-active{
+         @media(max-width: 800px){
+            // display: block;
+            // opacity: 1;
+            transform: translateX(0);
+             transition: all 3s ease-out;
+
+
+
+            
+        }
+
+        a{overflow-y: hidden;
+
+            span{
+                display: block;
+
+                 @media(max-width: 800px){
+           
+
+
+                   
+                     transform: translateY(0);
+                      transition: all 5s ease-in-out;
+        }
+
+            }
+        }
+       
+        
+           
+
     }
     &__links{
         display: flex;
@@ -25,15 +62,42 @@
         gap: 4.7rem;
 
           @media(max-width: 800px){
-            display:none;
+            flex-direction: column;
+            align-items: flex-start;
+            padding:126px  50px;
+             position: fixed;
+            inset: 0;
+            background: #fff;
+            // opacity: 0;
+           
+            transform: translateX(-100%);
+            transition: all 3s ease-out;
+           
         }
-        &-links{
+        a{
             font-family: var(--ff-satoshi);
             font-weight: 400;
             font-size: 24px;
             line-height: 32.4px;
             color: #000;
             text-decoration: none;
+            overflow-y: hidden;
+            // border: 1px solid #000;
+
+            
+
+            
+            span{
+                   @media(max-width: 800px){
+                    // background: #000;
+                    //  opacity: 0;
+                       transform: translateY(100%);
+                       transition: all 5s ease-in-out;
+                       
+           
+        }
+
+            }
         }
     }
     &__buttons{

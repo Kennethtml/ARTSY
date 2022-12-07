@@ -1,22 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './navbar.scss'
 import bell from '../../assets/bell.svg'
 import cart from "../../assets/cart.svg";
 import search from "../../assets/search.svg";
 import hambugger from "../../assets/hambugger.svg";
 import {NavLink} from "react-router-dom"
+
 function Navbar() {
+
+  const[toggle,setToggle]=useState(false)
   return (
     <nav className="nav wrapper">
-        <div className="hambugger">
+        <button  className="hambugger btn-logo" onClick={()=>setToggle(!toggle)}>
             <img src={hambugger} alt="hambugger" />
-        </div>
+        </button>
       <div className="logo">ARTSY.</div>
-      <div className="nav__links">
-        <NavLink className="nav__links-links" to={'/'}>Home</NavLink>
-        <NavLink className="nav__links-links" to={'market'}>Market place</NavLink>
-        <NavLink className="nav__links-links" to={"options"}>Options</NavLink>
-        <NavLink className="nav__links-links" to={"drop"}> Drop</NavLink>
+      <div className={`nav__links ${toggle? `toggle-active`:""}`}>
+        <NavLink className="nav__links-links" to={'/'}><span>Home</span></NavLink>
+        <NavLink className="nav__links-links" to={'market'}> <span>Market place</span></NavLink>
+        <NavLink className="nav__links-links" to={"options"}><span>Options</span></NavLink>
+        <NavLink className="nav__links-links" to={"drop"}>   <span>Drop</span></NavLink>
       </div>
       <div className="nav__buttons">
         <button className="btn-logo"><img src={search} alt="search" /></button>

@@ -1,46 +1,71 @@
 .exhibition{
     background-image: linear-gradient(99.99deg, #4693ED -26.21%, #79C2D2 22.16%, rgba(192, 86, 9, 0.49) 111.62%);
-   .header{
-    padding-block: 25px 17px;
+    @media(max-width: 450px){
+            padding-block: 33px;
+            margin-top: 100px;
+           }
+           
+   
+    .header{
+    padding-block: 2.5rem 1.7rem;
     //    margin-block: 25px 17px;
+     @media(max-width: 450px){
+            display: none;
+           }
        h2{
            color: #fff;
            font-family: var(--ff-satoshi);
            font-weight: 500;
-           font-size: 40px;
-           line-height: 54px;
+           font-size: 4rem;
+           line-height: 5.4rem;
            position: relative;
            display: inline-block;
            
            border-bottom: 3px solid rgba(#fff, 0.49);
+
+          
            
         
             }
             
         }
     &__hero{
-    min-height: 546px;
-   margin-top: 21px;
-   padding: 52px 33px;
+    min-height: 54.6rem;
+   margin-top: 2.1rem;
+   padding: 5.2rem 3.3rem;
    display: flex;
-   align-items: flex-end    ;
+   align-items: flex-end ;
+   @media(max-width:900px){
+       align-items: center;
+       min-height: auto;
+       padding: 5.2rem 10px;
+       margin-top: 0;
+        
+    }
 
    &-content{
     width: 100%;
     display: flex;
     justify-content: space-between;
     color: #fff;
+
+    @media(max-width:900px){
+        flex-direction: column;
+        gap: 12px;
+
+    }
     .info{
         display: grid;
-        grid-template-columns: 1fr 628px;
-        column-gap: 20px;
+        max-width: 70rem;
+        grid-template-columns: 6rem 1fr;
+        column-gap: 2rem;
         align-items: center;
         .bullet{
                 // content: "";
                 // position: absolute;
                 display: block;
-                width: 16px;
-                height: 16px;
+                width: 1.6rem;
+                height: 1.6rem;
                 border-radius: 50%;
                 background: #fff;
                 grid-column: 1/2;
@@ -54,22 +79,26 @@
             font-weight: 400;
             font-family: var(--ff-bellefaire);
             position: relative;
-            max-width: 354px;
+            max-width: 35.4rem;
             // margin-left: 12.42px;
             grid-column: 2/3;
             grid-row: 1/2;
+             @media(max-width:900px){
+       max-width: 100%;
+
+    }
             
 
            
         }
         .bullet-number{
-             font-size: 67.6px;
+             font-size: 6.76rem;
                 font-weight: 400;
                 font-family: var(--ff-bellefaire);
                
                 // border-radius: 50%;
                 // background: #fff;
-                left: -22.42px;
+                left: -2.24rem;
                 top: 5px;
                  grid-row: 2/3;
                  grid-column: 1/2;
@@ -93,7 +122,7 @@
               grid-row: 3/4;
                  font-family: var(--ff-satoshi);
             font-weight: 500;
-            font-size: 15.86px;
+            font-size: 1.7rem;
             line-height: 21.41px;
             letter-spacing: 6.5%;
 
@@ -116,17 +145,21 @@
             
             font-family: var(--ff-satoshi);
             font-weight: 400;
-            font-size: 24px;
+            font-size: 2.4rem;
             line-height: 32.4px;
             // border-bottom: 1px solid #fff;
 
         }
         button{
-            padding: 15px;
+            padding: 1.5rem;
             border: 1px solid #FFFFFF;
         border-radius: 10px;
         color: #fff;
         background: transparent;
+          font-family: var(--ff-satoshi);
+            font-weight: 400;
+            font-size: 2.4rem;
+            line-height: 3.24rem;
           
 
         }
@@ -140,6 +173,10 @@
     justify-content: space-between;
     align-items: center;
     padding-block: 21px 26.3px;
+     @media(max-width: 450px){
+            display: none;
+           }
+           
    }
 
    &__buttons{

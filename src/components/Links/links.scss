@@ -1,8 +1,9 @@
 .links{
-    padding-block: 190px;
+    padding-block: 19rem;
+    // width: 87%;
 
     .link{
-        padding-block: 54px;
+        padding-block: 5.4rem;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -16,11 +17,20 @@
             margin-left: 78px;
           font-family: var(--ff-satoshi); 
           font-weight: 500;
-          font-size: 48px;
-          line-height: 64px;
+          font-size: 4.8rem;
+          line-height: 6.4rem;
+
+          @media(max-width: 450px){
+                margin-left: 10px;
+            }
 
         }
         &__url{
+            width: 8.1rem;
+            height: 8.1rem;
+            margin-right: 10%;
+
+            
         }
 
     }

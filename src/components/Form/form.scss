@@ -9,11 +9,21 @@
 .form{
 
     border: 1px solid #333333;
-    padding-block:62px;
+    padding-block:6.2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 27px;
+
+     @media(max-width:450px){
+        align-items: flex-start;
+        border: none;
+      width: 93%;
+      margin-inline: auto;
+        
+    }
+
+   
 
     &__header{
         @include fonts(var(--ff-bellefaire),30px,400,39px);
@@ -21,22 +31,68 @@
 
     }
     &__info{
-        @include fonts(var(--ff-satoshi),32px ,400 ,43px )
+        @include fonts(var(--ff-satoshi),3.2rem ,400 ,4.3rem );
+              @media(max-width:900px){
+            font-size: 16px;
+            text-transform: uppercase;
+            
+        
+    }
+
+     @media(max-width:450px){
+           
+           font-size: 12px;
+          
+        
+    }
     }
     .input{
         display: flex;
         gap: 23px;
         width: 50%;
+        // border: 1px solid #000;
+         @media(max-width:900px){
+            flex-direction: column;
+            width: 80%;
+            align-items: flex-start;
+        
+    }
+
+     @media(max-width:450px){
+           
+            width: 100%;
+          
+        
+    }
 
         input{
-            padding: 20px;
+            padding:2rem;
             flex: 1;
 
+            width: 100%;
+
+            &::placeholder{
+                 font-family: var(--ff-satoshi);
+                 font-size: 12px;
+                
+
+            }
         }
         button{
             background: #272727;
-            padding: 23px 45px;
+            padding: 2.3rem 4.5rem;
             color: #fff;
+            align-self: center;
+            font-family: var(--ff-satoshi);
+
+             @media(max-width:450px){
+                 align-self: flex-start;
+                 font-size: 12px;
+           
+            
+          
+        
+    }
 
         }
     }
