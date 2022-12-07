@@ -2,8 +2,18 @@ import React from 'react'
 import Footer from '../components/Footer/Footer';
 import { dropData } from '../data';
 import UpComingDrop from '../components/UpcomingDrop/UpComingDrop';
+import { Context } from "../context";
+import { useContext,useEffect } from 'react';
 
 function Drop() {
+
+   const { setToggle } = useContext(Context);
+
+   useEffect(() => {
+     setToggle(false);
+   }, []);
+
+
   return (
       <>
     <main className="wrapper drops">
