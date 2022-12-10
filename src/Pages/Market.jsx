@@ -3,9 +3,12 @@ import { useEffect } from 'react'
 import { useDispatch,useSelector } from 'react-redux'
 import { getMarket } from '../features/Market/market'
 import { store} from "../store"
+import ProductCard from '../components/ProductCard/ProductCard'
+import "./../components/ProductCard/products.scss";
 
 
 function Market() {
+    
     const dispatch=useDispatch()
     
 
@@ -15,21 +18,23 @@ function Market() {
     },[])
 
     const{isLoading,marketData}=useSelector(store=>store.market)
- console.log(isLoading,marketData.products);
+    const products=marketData.products
+
+    console.log(products);
  
   return (
     <>
       {isLoading && <h1>loading</h1>}
       <div className='wrapper'>
-        {
-            marketData?.products?.map((product)=>{
-                return <div>
-                    <h1>{product.name}</h1>
-                    <img src={product.url} alt="" />
-                </div>
+        <div className="products">
 
+        {
+            products?.map((product)=>{
+                return <ProductCard key={product.id} product={product}/>
+                
             })
         }
+        </div>
 
       </div>
     </>

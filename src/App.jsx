@@ -5,6 +5,8 @@ import {Route,Routes} from "react-router-dom"
 import Home from './Pages/Home'
 import Drop from './Pages/Drop'
 import Market from './Pages/Market'
+import Footer from './components/Footer/Footer'
+import ProductPage from './Pages/ProductPage'
 
 
 function App() {
@@ -16,9 +18,10 @@ function App() {
       <Routes>
         <Route index element={<Home />} />
         <Route path="/drop" element={<Drop />} />
-        <Route path="/market" element={<Market />} />
+        <Route path="market/*" element={<Market />} />
+        <Route path='market/:id' element={<ProductPage/>} />
       </Routes>
-      <Market />
+      <Footer/>
     </div>
   );
 }
