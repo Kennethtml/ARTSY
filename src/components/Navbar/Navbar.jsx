@@ -7,10 +7,14 @@ import search from "../../assets/search.svg";
 import hambugger from "../../assets/hambugger.svg";
 import {NavLink} from "react-router-dom"
 import { Context } from '../../context';
+import { useSelector,useDispatch} from 'react-redux';
+import { setToggle } from '../../features/navtoggler/navtoggler';
 
 function Navbar() {
 
- const { setToggle, toggle} = useContext(Context);
+ const { toggle} = useSelector((store)=>store.navtoggle);
+ const dispatch=useDispatch()
+
 
 
   return (
@@ -18,7 +22,7 @@ function Navbar() {
       <nav className="wrapper nav">
         <button
           className="hambugger btn-logo"
-          onClick={() => setToggle(!toggle)}
+          onClick={() => dispatch(setToggle())}
         >
           {!toggle && <img src={hambugger} alt="hambugger" />}
           {toggle && <img src={x} alt="hambugger" />}
@@ -28,14 +32,15 @@ function Navbar() {
           <NavLink
             className="nav__links-links"
             to={"/"}
-            onClick={() => setToggle(false)}
+            onClick={() => dispatch(setToggle())}
           >
             <span>Home</span>
           </NavLink>
           <NavLink
             className="nav__links-links"
             to={"market"}
-            onClick={() => setToggle(false)}
+            o
+            onClick={() => dispatch(setToggle())}
           >
             {" "}
             <span>Market place</span>
@@ -43,14 +48,14 @@ function Navbar() {
           <NavLink
             className="nav__links-links"
             to={"options"}
-            onClick={() => setToggle(false)}
+            onClick={() => dispatch(setToggle())}
           >
             <span>Options</span>
           </NavLink>
           <NavLink
             className="nav__links-links"
             to={"drop"}
-            onClick={() => setToggle(false)}
+            onClick={() => dispatch(setToggle())}
           >
             {" "}
             <span>Drop</span>

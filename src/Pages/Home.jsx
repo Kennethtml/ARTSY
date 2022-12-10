@@ -5,13 +5,9 @@ import Exhibition from '../components/Exhibition/Exhibition';
 import Links from '../components/Links/Links';
 import Form from '../components/Form/Form';
 import Footer from '../components/Footer/Footer';
-import { Context } from '../context';
-function Home() {
- const{setToggle}= useContext(Context)
 
-    useEffect(() => {
-      setToggle(false);
-    }, []);
+function Home() {
+
   return (
     <>
       <Header />

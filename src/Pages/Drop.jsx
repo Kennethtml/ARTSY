@@ -4,13 +4,16 @@ import { dropData } from '../data';
 import UpComingDrop from '../components/UpcomingDrop/UpComingDrop';
 import { Context } from "../context";
 import { useContext,useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { setToggle } from '../features/navtoggler/navtoggler';
+
 
 function Drop() {
 
-   const { setToggle } = useContext(Context);
+   const dispatch=useDispatch()
 
    useEffect(() => {
-     setToggle(false);
+     dispatch(setToggle())
    }, []);
 
 
