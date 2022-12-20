@@ -6,18 +6,21 @@ import { getMarket } from "../features/Market/market";
 
 
 function ProductPage() {
-    const navigate=useParams()
-    const id=navigate.id
-     const dispatch = useDispatch();
+    const dispatch = useDispatch();
      useEffect(() => {
        dispatch(getMarket());
-     },[id]);
+     }, []);
+
+    const navigate=useParams()
+    const id=navigate.id
+    
+
 const {marketData}=useSelector((store)=>store.market)
 
     
 
     console.log(marketData);
-    const currentProduct=marketData.products.filter((product)=>product.id===id)
+    const currentProduct=marketData?.products?.filter((product)=>product.id===id)
    
   return (
     <div>

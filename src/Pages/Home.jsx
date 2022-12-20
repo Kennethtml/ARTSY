@@ -5,6 +5,7 @@ import Exhibition from '../components/Exhibition/Exhibition';
 import Links from '../components/Links/Links';
 import Form from '../components/Form/Form';
 import Footer from '../components/Footer/Footer';
+import News from '../components/News/News';
 
 function Home() {
 
@@ -14,10 +15,9 @@ function Home() {
       <Features />
       <Exhibition />
       <Links />
+      <News/>
       <Form />
-      <Footer />
-    </>
-  );
-}
+   
+      </>)}
 
 export default Home
