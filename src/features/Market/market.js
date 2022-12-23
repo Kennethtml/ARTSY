@@ -23,7 +23,7 @@ const marketSlice = createSlice({
     builder.addCase(getMarket.fulfilled,(state, action) => {
          state.isLoading = false;
       state.marketData = action.payload;
-      console.log(ac);
+    
   })
 
     builder.addCase(getMarket.rejected, (state, action) => {

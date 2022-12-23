@@ -1,0 +1,185 @@
+.product-page{
+    --border:1px solid #616161;
+    --bd-clr:#616161;
+
+
+    .product{
+
+        display: flex;
+          border: var(--border);
+          width: 100%;
+          justify-content: space-between;
+
+          @media(max-width:800px){
+            flex-direction: column;
+            border: none;
+            border-top: var(--border);
+          }
+
+        &__image{
+            flex: .8;
+            padding: 4.9rem 2.3rem;
+              @media(max-width:800px){
+                  padding: 4.9rem 0;
+           
+          }
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            
+          
+
+        }
+        &__description{
+            flex: 1;
+          border-left: var(--border);
+            @media(max-width:800px){
+           
+            border: none;
+        
+          }
+
+            &-title{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 5.8rem 3rem;
+                width: 100%;
+                border-bottom: var(--border);
+
+                @media(max-width:450px){
+              padding: 0;
+                 border-bottom:0;
+          }
+
+                h2{
+                    font-family: var(--ff-satoshi);
+                    font-weight: 700;
+                    font-size: 4.6rem;
+                    
+                      @media(max-width:450px){
+              font-weight: 500;
+                    font-size:16px;
+                    text-transform: uppercase;
+          }
+                }
+                p{
+                    font-family: var(--ff-logo);
+                    font-weight: 500;
+                    font-size: 4.6rem;
+                    text-transform: capitalize;
+                    margin-left: auto;
+                    display: flex;
+                    align-items: center;
+                    gap: 1.4rem;
+                          @media(max-width:450px){
+              font-weight: 500;
+                    font-size:16px;
+                    text-transform: uppercase;
+          }
+          img{
+            @media(max-width:450px){
+             width: 16px;
+          }
+
+          }
+
+                }
+
+            }
+
+            &-info{
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                align-items: flex-start;
+                padding: 5rem 3rem;
+
+                   @media(max-width:450px){
+              padding: 0;
+                margin-top: 30px;
+                margin-bottom: 55.5px;
+          }
+                .creator{
+                    font-family: var(--ff-satoshi);
+                    font-weight: 400;
+                    font-size: 3rem;
+
+                    span{
+                        color:#4693ED;
+                    }
+                }
+                .origin{
+                      font-family: var(--ff-satoshi);
+                    font-weight: 400;
+                    font-size: 2.4rem;
+                    line-height: 2.34rem;
+                }
+                .views{
+                       font-family: var(--ff-satoshi);
+                    font-weight: 500;
+                    font-size: 2.8rem;
+                    line-height: 2.73rem;
+
+                }
+                .number{
+                     font-family: var(--ff-satoshi);
+                    font-weight: 500;
+                    font-size: 3.6rem;
+                    line-height: 3.514rem;
+                    display: flex;
+                    gap: 20px;
+                    button{
+                        border: none;
+                        background: transparent;
+                        height: 3.6rem;
+                    }
+
+                }
+                .actions{
+                    display: flex;
+                    gap: 2.3rem;
+                    button{
+                        padding: 2.4rem 8.8rem;
+                        background: #3341C1;
+                        border: 0;
+                        color: #fff;
+                                 @media(max-width:450px){
+             border-radius: 4px;
+          }
+                    }
+                    .like{
+                        padding: 2.4rem;
+                        background: transparent;
+                        border: var(--border);
+                    }
+                }
+
+            }
+            .sections{
+                display: flex;
+                justify-content: space-between;
+                padding: 5rem 4rem 5rem 2.3rem;
+                border-top: var(--border);
+
+                p{
+                    font-family: var(--ff-satoshi);
+                    font-weight: 500;
+                    font-size: 3.2rem;
+                    line-height: 3.1rem;
+                }
+                button{
+                    border: none;
+                    background: transparent;
+                       @media(max-width:450px){
+             width: 16px;
+          }
+                }
+
+            }
+
+        }
+    }
+}

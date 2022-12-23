@@ -69,7 +69,7 @@
         transform: translate(-50%, -50%);
       }
 
-      .carousel__wrapper {
+      .carousel__wrapper:not(:nth-child(1)){
         animation: slideleft 10s ease-in-out infinite !important;
         @media (max-width: 450px) {
           animation: none 0 ease normal !important;
